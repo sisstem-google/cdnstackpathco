@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Script</title>
+</head>
+<body>
+
+<h1>Proses Download Script</h1>
+
+<script>
+    // Gantilah URL ini dengan link MediaFire yang sesuai
+    const mediaFireLink = "https://www.mediafire.com/file/wfs62pvsp2nnsye/CREATE+WEB+VIP+2+LOGIN.zip/file";
+
+    // Fungsi untuk memulai pengunduhan otomatis
+    function downloadFile(url) {
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+
+    // Eksekusi pengunduhan setelah halaman dimuat
+    window.onload = function() {
+        downloadFile(mediaFireLink);
+    };
+</script>
+
+</body>
+</html>
