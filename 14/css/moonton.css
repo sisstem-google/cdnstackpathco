@@ -1,0 +1,230 @@
+.header-moonton {
+    background: -webkit-linear-gradient(top, rgb(32 48 71) 0%, rgb(28 44 64) 100%);
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+}
+.header-moonton img {
+    width: 60;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.txt-login-moonton {
+	padding-top: 17px;
+    padding-left: 0;
+    color: #c2deee;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 7%;
+}
+.content-box-moonton {
+    width: 90%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 25px;
+	display: block;
+}
+.content-box-moonton-txt {
+    width: auto;
+    height: auto;        
+    display: inline-block;
+}   
+.content-box-moonton p {
+	color: #fa3e3e;	
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	display: none;
+}
+.content-box-moonton label {
+	color: #000;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+	float: left;
+	text-shadow: none;
+}
+.content-box-moonton label a {
+	color: #1da1f2;
+}
+.content-box-moonton button {
+	background: #67798d;
+    width: 49%;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    padding: 0px;
+    color: #a6b2bf;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    letter-spacing: 1;
+}
+.content-box-moonton buttonx {
+	background: #fff;
+    width: 100%;
+    height: auto;
+    margin-top: -10px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    padding: 10px;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    /* border: none; */
+    border-radius: 30px;
+    /* outline: none; */
+    letter-spacing: none;
+}
+buttonx {
+    appearance: auto;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    /* line-height: normal; */
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    writing-mode: horizontal-tb !important;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+.content-box-moonton-txt {
+    width: 90%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;	
+	padding-bottom: 10px;
+	display: block;
+}
+.content-box-moonton-txt img {
+	width: 55px;
+	border:none;
+	border-radius: 12px;
+	margin-top: 10px;
+	margin-right: 10px;		
+	float: left;
+}
+.content-box-moonton-txt-title {
+	color: #6A747E;
+	font-size: 17px;
+	padding-top: 11px;
+	padding-bottom: 4px;
+	font-family: Arial, sans-serif;
+	font-weight: 300;
+	text-align: left;	
+}
+.content-box-moonton-txt-det {   
+	width: auto;
+	height: auto;
+	padding-top: 2px;	
+	padding-bottom: 3px;
+	color: #8799A3;
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+	text-align: left;
+	text-shadow:none;		
+}
+. img {
+    width: 55px;        
+    float:left;
+    display: inline-block;
+}
+.content-box-moonton-txt label {
+    color: #90949c;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    text-align: left;
+    display: inline-block;
+}
+.form-group-moonton {
+	width: 100%;
+	max-width: 100%;
+	margin-right: auto;
+	margin-left: 0px;	
+	padding: 10px 0;
+	position: relative;
+	display: block;
+}
+.form-group-moonton input {
+	background: #22314e;
+	width: 100%;
+	padding: 16px;
+	padding-left: 9px;
+	color: #717171;
+	font-size: 17px;
+	font-family: Arial, sans-serif;
+	border: 1px solid #657786;
+	border-radius: 3.5px;
+	display: block;
+}
+.form-group-moonton label {
+	color: #425b82;
+	font-size: 17px;
+	font-weight: 100;
+	font-family: Arial, sans-serif;
+	text-align: right;
+	top: 0;
+	left: 10.5px;
+	position: absolute;
+	pointer-events: none;
+	transform: translateY(26px);
+	transition: all 0.2s ease-in-out;
+}
+.form-group-moonton input:valid,.form-group-moonton input:focus {
+	border: 2px solid #020202b4;
+	outline: none;
+}
+.form-group-moonton input:valid+label,.form-group-moonton input:focus+label {
+	color: #020202b4;
+	font-size: 12px;
+	top: 15px;
+	bottom: 20px;
+	transform: translateY(0);
+}
+.form-group-sohi {
+	width: 50px;
+	height: 73%;
+	margin-left: 84%;
+	position: absolute;
+	z-index: 9999999;
+	cursor: pointer;
+}
+.form-group-sohi img {
+	width: 25px;
+	margin-top: 14px;
+}
