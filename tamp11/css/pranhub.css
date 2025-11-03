@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: #FFF;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    all: unset;
+    text-decoration: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #1C1C1C;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 14px 8px;
+    color: #5D5D5D;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.user {
+    margin-right: 23px;
+}
+
+.header-bot {
+    border: 1px solid #5E5E5E;
+    border-left: none;
+    border-right: none;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search {
+    width: 245px;
+    padding: 10px 0px 10px 15px;
+    border: 1px solid #343434;
+    height: 14px;
+    color: #5D5D5D;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 6px;
+}
+
+.camera {
+    margin-left: auto;
+    margin-right: 9px;
+}
+
+.title {
+    padding: 17px 11px 17px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;   
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.grid-item {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #343434;
+}
+
+.img-container {
+    width: 100%;
+    position: relative;
+}
+
+.length {
+    position: absolute;
+    bottom: 4px;
+    right: 5px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.description {
+    padding: 0 4px;
+    height: 55px;
+    margin-bottom: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.description-views {
+    text-align: right;
+}
+
+.description-text,
+.description-views {
+    color: #AAAAAA;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+.description-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: auto;
+}
+
+.download {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    background: #FF9100;
+    padding: 8px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
