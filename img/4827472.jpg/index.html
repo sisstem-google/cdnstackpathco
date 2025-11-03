@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <title>TUTORIAL LUKY NESIA</title>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, white 40%, #ffe8d6 100%);
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            width: 100%;
+            height: 56px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .brand {
+            font-size: 19px;
+            font-weight: 700;
+            color: #ff8c42;
+        }
+
+        .brand a {
+            color: inherit;
+            text-decoration: none;;
+        }
+        
+        .nav-upload-btn {
+            margin-left: 24px;
+            background: #ff8c42;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(255, 140, 66, 0.2);
+        }
+        
+        .nav-upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 140, 66, 0.3);
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0px 16px;
+            line-height: 1.6;
+        }
+        
+        .video {
+            margin-top: 12px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        video {
+            border-radius: 8px;
+            max-height: 420px;
+        }
+
+        @media (min-width: 768px) {
+            video {
+                max-height: none;
+            }
+        }
+
+        .video-inner {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 720px;
+        }
+        
+        .video-error-container {
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+        }
+        
+        .video-error {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .video-error-reasons {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        footer {
+            padding: 20px 0;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        .footer-links {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .footer-link {
+            color: #ff8c42;
+            text-decoration: none;
+            transition: color 0.2s;
+            padding: 0 10px;
+        }
+        
+        .footer-link:hover {
+            color: #ff6a00;
+            text-decoration: underline;
+        }
+        
+        .footer-bullet {
+            color: #ccc;
+            font-size: 10px;
+            margin: 0 5px;
+        }
+
+        .as {
+            width: 300px;
+            height: 250px;
+            margin-top: 16px;
+        }
+    
+  </style>
+</head>
+<body data-version="v1.0.5">
+  <div class="navbar">
+    <div class="brand">
+      <a href="https://luky-nesia.my.id/linkgc">GRUP WEB VIP</a>
+    </div><a href="https://t.me/komunitas_lukyneisa"><button class=
+    "nav-upload-btn" id="navUploadBtn">Komunitas Admin</button></a>
+  </div>
+  <div class="main-content">
+    <div class="video">
+      <div class="video-inner">
+        <video autoplay="" controls="" width="100%" id="video"
+        playsinline><source src="https://cdn.videy.co/btr2DPvp1.mp4" type="video/mp4"> Your
+        browser does not support the video tag.</video>
+        <div id="video-error" style="display: none;" class=
+        "video-error-container">
+          <div class="video-error">
+            Unknown video.
+          </div>
+          <div class="video-error-reasons">
+            This video may have been removed, or there is another
+            problem.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="as"></div>
+  </div>
+  <footer>
+    <div class="footer-links">
+      <a href="https://whatsapp.com/channel/0029Vao1IQk1CYoVaCYR1K3w">GRUB TESTIMONI ADMIN</a> <span class=
+      "footer-bullet">•</span> <a href="https://t.me/komunitas_lukyneisa" class=
+      "footer-link">KOMUNITAS TELEGRAM</a>
+    </div>
+  </footer>
+  <script>
+
+        var videoLink;
+        $(document).ready(function() {
+            function getParameterByName(name) {
+                name = name.replace(/[\[\]]/g, '\\$&');
+                var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                    results = regex.exec(window.location.href);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            var sourceParam = getParameterByName('source');
+            if (sourceParam) {
+                var url = new URL(window.location.href);
+                url.searchParams.delete('source');
+                window.history.replaceState({}, '', url);
+
+                if (sourceParam === 'nativeApp') {
+                    localStorage.setItem('uploader', 'true');
+                }
+            }
+            
+            var paramValue = getParameterByName('v');
+            if (paramValue) {
+                var fileType = '.mp4';
+          
+                if (paramValue.length === 9 && paramValue[8] === '2') {
+                    fileType = '.mov';
+                }
+                videoLink = 'https://cdn.slicedrive.com/' + paramValue + fileType;
+                $('#video').attr('src', videoLink);
+                
+                // Set the correct MIME type based on file extension
+                $('#videoSource').attr('type', fileType === '.mp4' ? 'video/mp4' : 'video/quicktime');
+            } else {
+                // Show error if no ID parameter is provided
+                $('#video').hide();
+                $('#video-error').show();
+            }
+        });
+  </script> 
+  <script>
+
+        $(document).ready(function() {
+            const uploader = localStorage.getItem('uploader') || 'false';
+            const url = 'https://adserver.slicedrive.com/api/get_ads?uploader=' + uploader + 
+                '&width=' + window.screen.width;
+            
+            $.get(url, function(response) {
+                try {
+                    const data = typeof response === 'string' ? JSON.parse(response) : response;
+                    
+                     if (data['300x250'] && data.sticky) {
+                      $('.as').append(data['300x250']);
+                      $('.as').append(data.sticky);
+                    } else {
+                      const code = data.code;
+                      $('.as').append(code);
+                    }
+                } catch (error) {
+                    console.error("Error parsing the JSON response:", error);
+                }
+            });
+        });
+  </script>
+</body>
+  </html>
